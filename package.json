@@ -1,0 +1,48 @@
+{
+  "name": "nuxt-twitter-client",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "scripts": {
+    "dev": "nodemon --watch server ./server/index.js",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "^4.0.0-beta.7",
+    "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/dotenv": "^1.1.1",
+    "apollo-cache-inmemory": "^1.2.5",
+    "apollo-link": "^1.2.2",
+    "apollo-link-error": "^1.1.0",
+    "apollo-link-http": "^1.5.4",
+    "apollo-server-express": "^2.0.0-rc.7",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.2",
+    "connect-timeout": "^1.9.0",
+    "dayjs": "^1.7.1",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "firebase": "^5.2.0",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "helmet": "^3.12.1",
+    "nodemon": "^1.17.5",
+    "nuxt": "^1.4.1",
+    "pm2": "^2.10.4",
+    "twitter": "^1.7.1",
+    "twitter-node-client": "^0.0.6",
+    "twitter-text": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.0.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-vue": "^4.5.0"
+  }
+}

@@ -1,0 +1,10 @@
+html {
+  font-size: 62.5%;
+  font-family: "HelveticaNeue,Helvetica Neue,Helvetica,Arial,Verdana,sans-serif";
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-size: 1.4rem; 
+}

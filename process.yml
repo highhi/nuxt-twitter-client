@@ -1,0 +1,8 @@
+apps:
+  - script : ./server/index.js
+    name: 'nuxt-twitter-client'
+    watch  : ['server']
+    env    :
+      NODE_ENV: development
+    env_production:
+      NODE_ENV: production

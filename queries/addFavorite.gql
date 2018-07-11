@@ -1,0 +1,15 @@
+mutation($id: ID) {
+  addFavorite(id: $id) {
+    id
+    id_str
+    text
+    retweet_count
+    favorite_count
+    user {
+      id
+      name
+      screen_name
+      profile_image_url
+    }
+  }
+}
