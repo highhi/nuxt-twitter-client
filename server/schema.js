@@ -23,6 +23,7 @@ exports.typeDefs = gql`
   type Query {
     tweets(count: Int): [Tweet]
     userTweets(userId: ID!): [Tweet]
+    favorites(userId: ID): [Tweet]
   }
 
   type Mutation {
@@ -37,6 +38,9 @@ exports.resolvers = {
     },
     userTweets(_, { userId }) {
       return twitter.get('statuses/user_timeline', { count: 10, user_id: userId })
+    },
+    favorites() {
+      return twitter.get('favorites/list', { count: 10 })
     }
   },
   Mutation: {

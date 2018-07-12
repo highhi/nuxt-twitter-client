@@ -1,24 +1,21 @@
 <template>
-  <tw-favorites :tweets="getFavorites" />
+  <div>
+    <tw-tweet v-for="tweet in favorites" :tweet="tweet" :key="tweet.id" />
+  </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import TwTweet from '~/components/contexts/tw-tweet'
+import favoritesQuery from '~/queries/favorites'
 
 export default {
-  async fetch({ app, store, params, error }){
-    try {
-      const tweets = await app.$axios.$get(`/api/favorites/${params.id}`)
-      store.commit('setFavorites', tweets)
-    } catch(err) {
-      error({ statusCode: err.status, message: err.message })
-    }
-  },
   components: {
-    TwFavorites: () => import('~/components/pages/tw-favorites')
+    TwTweet
   },
-  computed: {
-    ...mapGetters(['getFavorites'])
+  apollo: {
+    favorites: {
+      query: favoritesQuery,
+    }, 
   }
 }
 </script>

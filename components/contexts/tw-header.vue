@@ -12,7 +12,7 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="`/favorites/${getUser.uid}`">
+        <nuxt-link to="/favorites">
           <icon-base :width="26" :height="26" :iconColor="'#fff'">
             <icon-heart :fillin="true" />
           </icon-base>
