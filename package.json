@@ -34,7 +34,6 @@
     "nuxt": "^1.4.1",
     "pm2": "^2.10.4",
     "twitter": "^1.7.1",
-    "twitter-node-client": "^0.0.6",
     "twitter-text": "^2.0.4"
   },
   "devDependencies": {

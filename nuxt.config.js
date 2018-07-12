@@ -49,7 +49,12 @@ module.exports = {
     '~plugins/tweet.js',
     '~plugins/firebase.js',
   ],
-  build: {
+  build: {    
+    babel: {
+      presets: [
+        ['vue-app', { targets: { browsers: '> 1%, not ie>=11' } }]
+      ]
+    },
     vendor: [
       'dayjs',
       'twitter-text',
