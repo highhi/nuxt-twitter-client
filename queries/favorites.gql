@@ -1,16 +1,23 @@
 query($userId: ID) {
   favorites(userId: $userId) {
-    id
-    id_str
-    text
-    created_at
-    retweet_count
-    favorite_count
-    user {
-      id
-      name
-      screen_name
-      profile_image_url
+    ...tweet
+    retweeted_status {
+      ...tweet
     }
+  }
+}
+
+fragment tweet on Tweet {
+  id
+  id_str
+  text
+  created_at
+  retweet_count
+  favorite_count
+  user {
+    id
+    name
+    screen_name
+    profile_image_url
   }
 }
