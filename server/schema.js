@@ -40,8 +40,8 @@ exports.resolvers = {
     }
   },
   Mutation: {
-    addFavorite(_, { id }) {
-      return twitter.post('favorites/create', { id })
+    addFavorite(_, { tweetId }) {
+      return twitter.post('favorites/create', { id: tweetId })
     }
   }
 };

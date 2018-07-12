@@ -54,9 +54,7 @@ export default {
       try {
         const res = await this.$apollo.mutate({
           mutation: addFavoriteQuery,
-          variables: {
-            id: tweetId
-          }
+          variables: { tweetId }
         })
       } catch(err) {
         throw err

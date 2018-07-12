@@ -1,5 +1,5 @@
-mutation($id: ID) {
-  addFavorite(id: $id) {
+mutation($tweetId: ID!) {
+  addFavorite(tweetId: $tweetId) {
     id
     id_str
     text
